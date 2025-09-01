@@ -35,7 +35,7 @@ const ProjectCard = ({ img, title, desc, tech, links, icons }: CardProps) => {
           >
             {links.map((link, i) => (
               <a key={i} href={link}>
-                <span className="text-6xl text-white">{icons[i]}</span>
+                <span className="text-5xl text-[#adadad]">{icons[i]}</span>
               </a>
             ))}
           </motion.div>

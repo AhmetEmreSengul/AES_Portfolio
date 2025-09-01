@@ -1,6 +1,5 @@
 import type React from "react";
-import { CiGlobe } from "react-icons/ci";
-import { FaGithub, FaLinkedinIn, FaPhone } from "react-icons/fa";
+import { FaExternalLinkAlt, FaGithub, FaLinkedinIn, FaPhone } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 
@@ -40,7 +39,7 @@ export const projectDetails: projectDetails[] = [
       "https://github.com/AhmetEmreSengul/squirell",
       "https://squirell.onrender.com",
     ],
-    icons: [<FaGithub />, <CiGlobe />],
+    icons: [<FaGithub />, <FaExternalLinkAlt />],
   },
   {
     img: "../../ImagineAI.png",
@@ -51,7 +50,7 @@ export const projectDetails: projectDetails[] = [
       "https://github.com/AhmetEmreSengul/ai_image_generation",
       "https://ai-image-generation-eyvm.onrender.com",
     ],
-    icons: [<FaGithub />, <CiGlobe />],
+    icons: [<FaGithub />, <FaExternalLinkAlt />],
   },
   {
     img: "../../Portfolio.png",
@@ -62,7 +61,7 @@ export const projectDetails: projectDetails[] = [
       "https://github.com/AhmetEmreSengul/AES_Portfolio",
       "https://ai-image-generation-eyvm.onrender.com",
     ],
-    icons: [<FaGithub />, <CiGlobe />],
+    icons: [<FaGithub />, <FaExternalLinkAlt />],
   },
 ];
 
