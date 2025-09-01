@@ -45,7 +45,7 @@ export const projectDetails: projectDetails[] = [
   {
     img: "../../ImagineAI.png",
     title: "IMAGE GENERATION WEB APP",
-    desc: "A web application that generates images based on user input using OpenAI's image generaton API",
+    desc: "A web application that generates images based on user input using OpenAI's image generaton API.",
     tech: ["HTML", "CSS", "JavaScript"],
     links: [
       "https://github.com/AhmetEmreSengul/ai_image_generation",
@@ -54,12 +54,12 @@ export const projectDetails: projectDetails[] = [
     icons: [<FaGithub />, <CiGlobe />],
   },
   {
-    img: "../../ImagineAI.png",
-    title: "IMAGE GENERATION WEB APP",
-    desc: "A web application that generates images based on user input using OpenAI's image generaton API",
-    tech: ["HTML", "CSS", "JavaScript"],
+    img: "../../Portfolio.png",
+    title: "PORTFOLIO WEBSITE",
+    desc: "A web application about me.",
+    tech: ["React", "Tailwind", "Framer"],
     links: [
-      "https://github.com/AhmetEmreSengul/ai_image_generation",
+      "https://github.com/AhmetEmreSengul/AES_Portfolio",
       "https://ai-image-generation-eyvm.onrender.com",
     ],
     icons: [<FaGithub />, <CiGlobe />],
