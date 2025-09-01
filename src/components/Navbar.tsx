@@ -1,0 +1,97 @@
+import { useEffect, useState } from "react";
+import { TbLayoutNavbarExpandFilled } from "react-icons/tb";
+import { AnimatePresence, motion } from "framer-motion";
+import { navItems } from "../data";
+
+const Navbar = () => {
+  const [width, setWidth] = useState(window.innerWidth);
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => setWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  return (
+    <div>
+      <nav className="flex justify-center items-center w-full container ">
+        <div
+          className={` ${
+            width < 450
+              ? "w-screen container h-16 bg-[#90979909] flex justify-between items-center backdrop-blur-sm"
+              : "w-215 container h-16 bg-[#6e898f2c] rounded-full flex justify-between items-center mt-5 backdrop-blur-sm"
+          } `}
+        >
+          <p className="ml-3 font-bold text-lg">Ahmet Emre Şengül</p>
+
+          {width < 450 ? (
+            <div className="mr-3">
+              <TbLayoutNavbarExpandFilled
+                onClick={() => setOpen(!open)}
+                size={28}
+                className={`${
+                  open ? "rotate-180 transition" : "transition rotate-0"
+                }`}
+              />
+            </div>
+          ) : (
+            <div>
+              <ul className="flex gap-5 mr-3 font-semibold text-md">
+                {navItems.map((item) => (
+                  <motion.li
+                    key={item.id}
+                    className="flex flex-col items-center justify-center"
+                  >
+                    <a
+                      className="flex flex-col hover:text-purple-500 transition"
+                      href={item.href}
+                    >
+                      {item.name}
+                    </a>
+                  </motion.li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
+      </nav>
+      <div className="flex items-center justify-center">
+        <AnimatePresence>
+          {open && (
+            <motion.div
+              className="bg-transparent w-screen backdrop-blur-md"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ delay: 0.2 }}
+            >
+              <motion.ul className="flex h-screen flex-col items-center gap-10 items text-lg ml-5 mt-8 ">
+                {navItems.map((item, i) => (
+                  <motion.li
+                    key={item.id}
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ delay: 0.1 + i * 0.1 }}
+                    className="border-b border-purple-700"
+                  >
+                    <a
+                      onClick={() => setOpen(false)}
+                      className="font-light text-2xl"
+                      href={item.href}
+                    >
+                      {item.name}
+                    </a>
+                  </motion.li>
+                ))}
+              </motion.ul>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
+    </div>
+  );
+};
+
+export default Navbar;
