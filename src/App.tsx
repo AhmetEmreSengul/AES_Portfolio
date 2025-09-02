@@ -6,7 +6,7 @@ import Contact from "./components/Contact";
 
 const App = () => {
   return (
-    <div className="h-screen w-screen flex flex-col items-center font-[Lato] text-[#adadad] overflow-x-hidden scroll-smooth bg-black">
+    <div className="h-screen w-screen flex flex-col items-center font-[Lato] text-white overflow-x-hidden scroll-smooth bg-black">
       <div className="fixed z-1">
         <Navbar />
       </div>
