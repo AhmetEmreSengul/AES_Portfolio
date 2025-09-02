@@ -1,6 +1,6 @@
 <div align="center">
 
-<h3 align="center">SQUIRELL</h3>
+<h3 align="center">AES Portfolio</h3>
 
 https://aes-portfolio.onrender.com
 
