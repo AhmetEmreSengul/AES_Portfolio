@@ -1,69 +1,103 @@
-# React + TypeScript + Vite
+## Portfolio (React + TypeScript + Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fast, modern personal portfolio built with React, TypeScript, Vite, and Tailwind CSS. Includes animated sections, 3D/visual effects, and a clean component architecture.
 
-Currently, two official plugins are available:
+### Tech stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Framework**: React 19 + TypeScript
+- **Build tool**: Vite
+- **Styling**: Tailwind CSS (v4) with `@tailwindcss/vite`
+- **Animations**: Framer Motion, Motion, GSAP
 
-## Expanding the ESLint configuration
+### Getting started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1. Install dependencies
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Start the dev server
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
 ```
+
+3. Build for production
+
+```bash
+npm run build
+```
+
+4. Preview the production build
+
+```bash
+npm run preview
+```
+
+### Available scripts
+
+- **dev**: Start Vite dev server
+- **build**: Type-check and build for production
+- **preview**: Preview the production build
+- **lint**: Run ESLint
+
+### Project structure
+
+```text
+Port/
+  public/                 # Static assets (images)
+  src/
+    components/
+      Navbar.tsx
+      Hero.tsx
+      Project.tsx
+      Experience.tsx
+      Contact.tsx
+      layouts/
+        BGBeams.tsx       # Background/visual effects
+        ProjectCard.tsx   # Project display card
+        TextSnippet.tsx   # Reusable text/heading block
+      lib/
+        utils.ts          # Utility helpers
+    data.tsx              # Data for projects/experience
+    App.tsx               # App composition
+    index.css             # Tailwind base/styles
+    main.tsx              # Entry point
+  vite.config.ts
+  tsconfig*.json
+  README.md
+```
+
+### Components overview
+
+- **Navbar**: Top navigation across sections
+- **Hero**: Landing section with headline and call-to-action
+- **Project + ProjectCard**: List and card for portfolio projects
+- **Experience**: Work/education timeline or highlights
+- **Contact**: Contact methods or form
+- **BGBeams**: Animated/3D background effects
+- **TextSnippet**: Shared typography/heading block
+
+### Styling
+
+- Tailwind CSS v4 configured via `@tailwindcss/vite`
+- Global styles in `src/index.css`
+- Utility-first classes with `clsx` and `tailwind-merge` for conditional and conflict-free class names
+
+### Data
+
+- Centralized in `src/data.tsx` for projects, experience, or links. Update this file to change displayed content without touching component logic.
+
+### Deployment
+
+- Any static host works (Vercel, Netlify, GitHub Pages, etc.).
+- Build with `npm run build`, then deploy the `dist/` directory.
+
+### Requirements
+
+- Node.js 18+ recommended
+
+### License
+
+- This project is open-sourced under the terms of the license in `LICENSE`.
