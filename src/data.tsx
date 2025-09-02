@@ -1,5 +1,10 @@
 import type React from "react";
-import { FaExternalLinkAlt, FaGithub, FaLinkedinIn, FaPhone } from "react-icons/fa";
+import {
+  FaExternalLinkAlt,
+  FaGithub,
+  FaLinkedinIn,
+  FaPhone,
+} from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 
@@ -21,6 +26,7 @@ interface ContactInfoItem {
 interface SocialLink {
   url: string;
   icon: React.ReactNode;
+  title: string;
 }
 
 interface navItems {
@@ -34,7 +40,7 @@ export const projectDetails: projectDetails[] = [
     img: "../../squirell.png",
     title: "FINTECH TRADING PLATFORM",
     desc: "A full stack web app where users are able to invest in land, art and other valuables taking advantage of fractional shares.",
-    tech: ["React", "Tailwind", "MongoDB", "Express"],
+    tech: ["React", "Tailwind", "MongoDB", "Node"],
     links: [
       "https://github.com/AhmetEmreSengul/squirell",
       "https://squirell.onrender.com",
@@ -55,8 +61,8 @@ export const projectDetails: projectDetails[] = [
   {
     img: "../../Portfolio.png",
     title: "PORTFOLIO WEBSITE",
-    desc: "A web application about me.",
-    tech: ["React", "Tailwind", "Framer"],
+    desc: "A web application about my work experience, projects.",
+    tech: ["React", "Tailwind", "Framer-Motion"],
     links: [
       "https://github.com/AhmetEmreSengul/AES_Portfolio",
       "https://ai-image-generation-eyvm.onrender.com",
@@ -80,10 +86,15 @@ export const contactInfo: ContactInfoItem[] = [
 ];
 
 export const socials: SocialLink[] = [
-  { url: "https://github.com/AhmetEmreSengul", icon: <FaGithub size={27} /> },
+  {
+    url: "https://github.com/AhmetEmreSengul",
+    icon: <FaGithub size={27} />,
+    title: "Github",
+  },
   {
     url: "https://www.linkedin.com/in/ahmet-emre-şengül-",
     icon: <FaLinkedinIn size={27} />,
+    title: "LinkedIn",
   },
 ];
 

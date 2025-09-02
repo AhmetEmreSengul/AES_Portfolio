@@ -15,7 +15,7 @@ const ProjectCard = ({ img, title, desc, tech, links, icons }: CardProps) => {
 
   return (
     <div
-      className="mt-7 w-90 md:w-100 shadow-2xl hover:-translate-y-2 transition z-0"
+      className="mt-7 w-80 md:w-100 shadow-2xl hover:-translate-y-2 transition z-0"
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
     >
@@ -32,6 +32,7 @@ const ProjectCard = ({ img, title, desc, tech, links, icons }: CardProps) => {
             className="flex flex-row gap-4"
             initial={{ opacity: 0, y: 20 }}
             animate={hover ? { opacity: 1, y: 0 } : {}}
+            viewport={{once : true}}
           >
             {links.map((link, i) => (
               <a key={i} href={link}>
@@ -41,7 +42,7 @@ const ProjectCard = ({ img, title, desc, tech, links, icons }: CardProps) => {
           </motion.div>
         </div>
       </div>
-      <div className="flex h-55 flex-col bg-[#01011dc4] rounded-b-2xl  overflow-hidden">
+      <div className="flex h-55 flex-col bg-[#01011d54] rounded-b-2xl  overflow-hidden">
         <h1 className="font-bold mt-2 p-3 z-10 "> {title} </h1>
         <p className="font-light mt-3 p-3 h-22 z-10 ">{desc}</p>
         <div className="space-x-3 p-3 z-10 ">
@@ -52,6 +53,7 @@ const ProjectCard = ({ img, title, desc, tech, links, icons }: CardProps) => {
               initial={{ y: -20, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.2 + i * 0.1 }}
+              viewport={{once : true}}
             >
               {item}
             </motion.span>

@@ -17,9 +17,9 @@ const Hero = () => {
           noiseIntensity={0.75}
           scale={0.18}
           rotation={23}
-          lightColor="#7e04c5"
+          lightColor="#a200ff"
         />
-        <div className="bg-[#7e04c5]"></div>
+        <div className="bg-[#107daf]"></div>
       </div>
       <div className="text-5xl flex gap-3">
         Hello, I'm <p className="text-purple-500">Ahmet</p>
