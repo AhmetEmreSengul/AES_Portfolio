@@ -1,4 +1,10 @@
-## Portfolio (React + TypeScript + Vite)
+<div align="center">
+
+<h3 align="center">SQUIRELL</h3>
+
+https://aes-portfolio.onrender.com
+
+</div>
 
 A fast, modern personal portfolio built with React, TypeScript, Vite, and Tailwind CSS. Includes animated sections, 3D/visual effects, and a clean component architecture.
 

@@ -65,7 +65,7 @@ export const projectDetails: projectDetails[] = [
     tech: ["React", "Tailwind", "Framer-Motion"],
     links: [
       "https://github.com/AhmetEmreSengul/AES_Portfolio",
-      "https://ai-image-generation-eyvm.onrender.com",
+      "https://aes-portfolio.onrender.com",
     ],
     icons: [<FaGithub />, <FaExternalLinkAlt />],
   },
