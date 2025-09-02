@@ -89,15 +89,9 @@ Port/
 
 - Centralized in `src/data.tsx` for projects, experience, or links. Update this file to change displayed content without touching component logic.
 
-### Deployment
-
-- Any static host works (Vercel, Netlify, GitHub Pages, etc.).
-- Build with `npm run build`, then deploy the `dist/` directory.
+.
 
 ### Requirements
 
 - Node.js 18+ recommended
 
-### License
-
-- This project is open-sourced under the terms of the license in `LICENSE`.
