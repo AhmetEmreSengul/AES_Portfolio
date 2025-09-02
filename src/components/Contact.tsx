@@ -19,7 +19,7 @@ const Contact = () => {
       />
       <div className="flex flex-col md:flex-row gap-5 items-center md:items-start mt-10">
         <motion.div
-          className="md:size-135 container bg-[#ffffff93] rounded-lg backdrop-blur-sm"
+          className="md:size-135 container bg-[#9793931a] rounded-lg backdrop-blur-sm"
           initial={{ x: -30, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ delay: 0.2 }}
@@ -89,7 +89,7 @@ const Contact = () => {
             <motion.a
               href="#about"
               title="Back to Top"
-              className="p-2 bg-purple-900 rounded-full fixed bottom-2 right-7 md:bottom-37 md:right-90 text-2xl md:text-5xl"
+              className="p-2 bg-purple-900 rounded-full fixed bottom-2 right-7 md:bottom-37 md:right-5 2xl:right-80 text-2xl md:text-5xl "
               initial={{ x: 50, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               exit={{ x: 50, opacity: 0 }}
