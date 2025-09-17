@@ -77,7 +77,7 @@ const Contact = () => {
           />
           <a
             title="View CV"
-            href="https://drive.google.com/file/d/1x6gEhSKVtMtIfqgd42pWqfai68ZBHg25/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1_QAg-wyRPbwtz5hSXotjKfW3eRNIXKOo/view?usp=sharing"
             download
             className="mt-4 w-fit px-6 py-3 border-2 border-purple-800 text-white rounded-lg hover:border-purple-600 transition "
           >
