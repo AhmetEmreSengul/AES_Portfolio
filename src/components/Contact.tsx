@@ -9,7 +9,7 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="w-screen mt-20 md:mt-0 md:h-[850px] flex justify-center items-center flex-col"
+      className="w-screen p-4 mt-20 md:mt-0 md:h-[850px] flex justify-center items-center flex-col"
     >
       <h1 className="text-4xl">Contact</h1>
       <motion.p
@@ -33,6 +33,7 @@ const Contact = () => {
                 initial={{ x: -20, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ delay: 0.3 + i * 0.1 }}
+                viewport={{ once: true }}
               >
                 <p className="p-2 bg-purple-900 text-purple-300 rounded-full">
                   {contact.icon}
@@ -78,7 +79,8 @@ const Contact = () => {
           <a
             title="View CV"
             href="https://drive.google.com/file/d/1_QAg-wyRPbwtz5hSXotjKfW3eRNIXKOo/view?usp=sharing"
-            download
+            target="_blank"
+            rel="noopener noreferrer"
             className="mt-4 w-fit px-6 py-3 border-2 border-purple-800 text-white rounded-lg hover:border-purple-600 transition "
           >
             View

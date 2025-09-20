@@ -80,7 +80,7 @@ export const contactInfo: ContactInfoItem[] = [
   { title: "Phone", value: "+905352278586", icon: <FaPhone size={24} /> },
   {
     title: "Location",
-    value: "Istanbul, Bahçelievler",
+    value: "Turkey, Istanbul",
     icon: <FaLocationDot size={24} />,
   },
 ];
