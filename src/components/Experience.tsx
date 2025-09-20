@@ -8,7 +8,7 @@ const Experience = () => {
   return (
     <div
       id="experience"
-      className="w-screen h-[850px] flex flex-col items-center justify-center"
+      className="w-screen h-[750px] flex flex-col items-center justify-center"
     >
       <h1 className="text-4xl flex items-center justify-center flex-col ">
         Experience
@@ -16,7 +16,7 @@ const Experience = () => {
           initial={{ width: 0 }}
           whileInView={{ width: 250 }}
           className="border-b-2 border-purple-500 w-70 mt-1"
-          viewport={{once : true}}
+          viewport={{ once: true }}
         />
       </h1>
       <div className="mt-10 flex flex-col md:flex-row items-center justify-center">
@@ -24,7 +24,7 @@ const Experience = () => {
           initial={{ x: -20, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ delay: 0.2 }}
-          viewport={{once : true}}
+          viewport={{ once: true }}
           src="../vestel.jpg"
           alt=""
           className="size-80 rounded-t-2xl md:rounded-t-none md:rounded-l-2xl"
@@ -34,7 +34,7 @@ const Experience = () => {
           initial={{ x: 20, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ delay: 0.2 }}
-          viewport={{once : true}}
+          viewport={{ once: true }}
         >
           <h2 className="text-xl md:text-2xl mt-10 mb-2 font-bold">
             Front-end Developer Intern
@@ -62,7 +62,7 @@ const Experience = () => {
                   initial={{ y: -20, opacity: 0 }}
                   whileInView={{ y: 0, opacity: 1 }}
                   transition={{ delay: 0.2 + i * 0.1 }}
-                  viewport={{once : true}}
+                  viewport={{ once: true }}
                 >
                   <span className="p-2 rounded-full bg-purple-600/25 backdrop-blur-md">
                     {tech}
