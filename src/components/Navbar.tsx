@@ -19,20 +19,19 @@ const Navbar = () => {
   }, []);
 
   const { scrollYProgress } = useScroll();
-  const lineWidth = useTransform(scrollYProgress, [0, 1], ["0%", "45%"]);
-  const lineWidthMobile = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
+  const lineWidth = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
     <div>
-      <motion.div
-        className={` ${
-          width < 450
-            ? "w-screen container h-16 bg-[#8007c59c] flex justify-between items-center backdrop-blur-sm fixed"
-            : "w-215 container h-16 bg-[#8007c59c] rounded-full flex justify-between items-center mt-5 backdrop-blur-sm fixed"
-        } `}
-        style={{ width: width < 450 ? lineWidthMobile : lineWidth }}
-      />
-      <nav className="flex justify-center items-center w-full container ">
+      <nav className="flex justify-center items-center w-full container relative">
+        <motion.div
+          className={`absolute top-0 left-0 ${
+            width < 450
+              ? "h-16 bg-[#8007c59c]"
+              : "h-16 bg-[#8007c59c] rounded-full flex mt-5 "
+          } `}
+          style={{ width: lineWidth }}
+        />
         <div
           className={` ${
             width < 450
