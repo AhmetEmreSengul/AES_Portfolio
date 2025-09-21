@@ -1,6 +1,11 @@
 import { useEffect, useState } from "react";
 import { TbLayoutNavbarExpandFilled } from "react-icons/tb";
-import { AnimatePresence, motion } from "framer-motion";
+import {
+  AnimatePresence,
+  motion,
+  useScroll,
+  useTransform,
+} from "framer-motion";
 import { navItems } from "../data";
 
 const Navbar = () => {
@@ -12,15 +17,33 @@ const Navbar = () => {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+  
+  useEffect(() => {
+    const handleResize = () => setWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const { scrollYProgress } = useScroll();
+  const lineWidth = useTransform(scrollYProgress, [0, 1], ["0%", "45%"]);
+  const lineWidthMobile = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
     <div>
+      <motion.div
+        className={` ${
+          width < 450
+            ? "w-screen container h-16 bg-[#8007c59c] flex justify-between items-center backdrop-blur-sm fixed"
+            : "w-215 container h-16 bg-[#8007c59c] rounded-full flex justify-between items-center mt-5 backdrop-blur-sm fixed"
+        } `}
+        style={{ width: width < 450 ? lineWidthMobile : lineWidth }}
+      />
       <nav className="flex justify-center items-center w-full container ">
         <div
           className={` ${
             width < 450
-              ? "w-screen container h-16 bg-[#90979909] flex justify-between items-center backdrop-blur-sm"
-              : "w-215 container h-16 bg-[#6e898f2c] rounded-full flex justify-between items-center mt-5 backdrop-blur-sm"
+              ? "w-screen container h-16 bg-[#ffffff21] flex justify-between items-center backdrop-blur-sm"
+              : "w-215 container h-16 bg-[#ffffff23] rounded-full flex justify-between items-center mt-5 backdrop-blur-sm "
           } `}
         >
           <p className="ml-3 font-bold text-lg">Ahmet Emre Şengül</p>

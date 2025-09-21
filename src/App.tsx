@@ -8,7 +8,7 @@ import Beams from "./components/layouts/BGBeams";
 const App = () => {
   return (
     <div className="min-h-screen w-screen flex flex-col items-center font-[Lato] text-white overflow-x-hidden bg-black">
-      <div className="fixed z-1">
+      <div className="fixed z-10">
         <Navbar />
       </div>
       <div className="z-0 relative">
