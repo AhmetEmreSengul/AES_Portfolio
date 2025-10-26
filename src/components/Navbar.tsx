@@ -23,7 +23,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <nav className="flex justify-center items-center w-full container relative z-0">
+      <nav className="flex justify-center items-center w-full container relative">
         <div
           className={`${
             width < 450
@@ -32,17 +32,17 @@ const Navbar = () => {
           }`}
         >
           <motion.div
-            className="absolute top-0 left-0 h-full bg-[#8007c59c]"
+            className="absolute top-0 left-0 h-full bg-[#8007c59c] z-0"
             style={{ width: lineWidth }}
           />
           <p className="ml-3 font-bold text-lg z-10">Ahmet Emre Şengül</p>
 
           {width < 450 ? (
-            <div className="mr-3">
+            <div className="mr-3 z-10">
               <TbLayoutNavbarExpandFilled
                 onClick={() => setOpen(!open)}
                 size={28}
-                className={`${
+                className={` ${
                   open ? "rotate-180 transition" : "transition rotate-0"
                 }`}
               />
@@ -72,6 +72,7 @@ const Navbar = () => {
         <AnimatePresence>
           {open && (
             <motion.div
+              onClick={() => setOpen(false)}
               className="bg-transparent w-screen backdrop-blur-md"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
