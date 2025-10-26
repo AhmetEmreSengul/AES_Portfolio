@@ -23,23 +23,19 @@ const Navbar = () => {
 
   return (
     <div>
-      <nav className="flex justify-center items-center w-full container relative">
-        <motion.div
-          className={`absolute top-0 left-0 ${
-            width < 450
-              ? "h-16 bg-[#8007c59c]"
-              : "h-16 bg-[#8007c59c] rounded-full flex mt-5 "
-          } `}
-          style={{ width: lineWidth }}
-        />
+      <nav className="flex justify-center items-center w-full container relative z-0">
         <div
-          className={` ${
+          className={`${
             width < 450
-              ? "w-screen container h-16 bg-[#ffffff21] flex justify-between items-center backdrop-blur-sm"
-              : "w-215 container h-16 bg-[#ffffff23] rounded-full flex justify-between items-center mt-5 backdrop-blur-sm "
-          } `}
+              ? "w-screen container h-16 bg-[#ffffff21] flex justify-between items-center backdrop-blur-sm relative overflow-hidden"
+              : "w-215 container h-16 bg-[#ffffff23] rounded-full flex justify-between items-center mt-5 backdrop-blur-sm relative overflow-hidden"
+          }`}
         >
-          <p className="ml-3 font-bold text-lg">Ahmet Emre Şengül</p>
+          <motion.div
+            className="absolute top-0 left-0 h-full bg-[#8007c59c]"
+            style={{ width: lineWidth }}
+          />
+          <p className="ml-3 font-bold text-lg z-10">Ahmet Emre Şengül</p>
 
           {width < 450 ? (
             <div className="mr-3">
@@ -60,7 +56,7 @@ const Navbar = () => {
                     className="flex flex-col items-center justify-center"
                   >
                     <a
-                      className="flex flex-col hover:text-purple-500 transition"
+                      className="flex flex-col hover:text-purple-500 transition z-10"
                       href={item.href}
                     >
                       {item.name}
