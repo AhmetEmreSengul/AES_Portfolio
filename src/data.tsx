@@ -1,4 +1,3 @@
-import type React from "react";
 import {
   FaExternalLinkAlt,
   FaGithub,
@@ -7,33 +6,6 @@ import {
 } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
-
-interface projectDetails {
-  img: string;
-  title: string;
-  desc: string;
-  tech: string[];
-  links: string[];
-  icons: React.ReactNode[];
-}
-
-interface ContactInfoItem {
-  title: string;
-  value: string;
-  icon: React.ReactNode;
-}
-
-interface SocialLink {
-  url: string;
-  icon: React.ReactNode;
-  title: string;
-}
-
-interface navItems {
-  id: number;
-  name: string;
-  href: string;
-}
 
 export const projectDetails: projectDetails[] = [
   {
