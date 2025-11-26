@@ -41,6 +41,17 @@ export const projectDetails: projectDetails[] = [
     ],
     icons: [<FaGithub />, <FaExternalLinkAlt />],
   },
+  {
+    img: "../../coffee.png",
+    title: "THE TIME SLOT CAFE",
+    desc: "A full-stack web app where users are able to book a table to be granted access to a coffee shop.",
+    tech: ["Mongo", "Express", "React", "Node"],
+    links: [
+      "https://github.com/AhmetEmreSengul/coffee",
+      "https://timeslot-dtqf.onrender.com",
+    ],
+    icons: [<FaGithub />, <FaExternalLinkAlt />],
+  },
 ];
 
 export const contactInfo: ContactInfoItem[] = [
