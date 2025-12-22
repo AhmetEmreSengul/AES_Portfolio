@@ -89,7 +89,7 @@ const Contact = () => {
         <AnimatePresence>
           {toTop && (
             <motion.a
-              href="#about"
+              href="#"
               title="Back to Top"
               className="p-2 bg-purple-900 rounded-full fixed bottom-2 right-7 md:bottom-37 md:right-5 2xl:right-80 text-2xl md:text-5xl "
               initial={{ x: 50, opacity: 0 }}

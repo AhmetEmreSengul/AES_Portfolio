@@ -52,6 +52,17 @@ export const projectDetails: projectDetails[] = [
     ],
     icons: [<FaGithub />, <FaExternalLinkAlt />],
   },
+  {
+    img: "../../wii.png",
+    title: "WII MENU INSPIRED INTERACTIVE PORTFOLIO",
+    desc: "Recreation of the Nintendo Wii homepage.",
+    tech: ["React", "Tailwind", "Framer-Motion"],
+    links: [
+      "https://github.com/AhmetEmreSengul/wii-portfolio",
+      "wii-portfolio.onrender.com",
+    ],
+    icons: [<FaGithub />, <FaExternalLinkAlt />],
+  },
 ];
 
 export const contactInfo: ContactInfoItem[] = [
