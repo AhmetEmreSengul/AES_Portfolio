@@ -14,6 +14,10 @@ app.use(
 );
 app.use(express.json());
 
+app.get("/ping", (_, res) => {
+  res.status(200).send("ok");
+});
+
 app.use("/api", chatRoutes);
 
 if (env.NODE_ENV === "production") {
