@@ -6,8 +6,10 @@ import remarkGfm from "remark-gfm";
 export function Chat() {
   const [input, setInput] = useState("");
 
+  const baseURL = import.meta.env.MODE === "development" ? "http://localhost:3000" : "https://aes-portfolio-kt82.onrender.com";
+
   const { messages, sendMessage, isLoading } = useChat({
-    connection: fetchServerSentEvents("http://localhost:3000/api/chat", {
+    connection: fetchServerSentEvents(`${baseURL}/api/chat`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
