@@ -107,7 +107,7 @@ export function Chat() {
           Tell me about your projects.
         </button>
         <button
-          onClick={() => setInput(" What are your skills?")}
+          onClick={() => setInput("What progamming languages are you familiar with?")}
           className="p-1 w-full bg-purple-800 rounded-lg font-bold cursor-pointer"
         >
           What progamming languages are you familiar with?
