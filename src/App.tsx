@@ -4,8 +4,13 @@ import About from "./components/Experience";
 import Project from "./components/Project";
 import Contact from "./components/Contact";
 import Beams from "./components/layouts/BGBeams";
+import { useEffect } from "react";
 
 const App = () => {
+  useEffect(() => {
+    fetch("/ping", { cache: "no-store" });
+  }, []);
+
   return (
     <div className="min-h-screen w-screen flex flex-col items-center font-[Lato] text-white overflow-x-hidden bg-black">
       <div className="fixed z-10">
