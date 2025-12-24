@@ -81,7 +81,7 @@ Description:
 A full-stack web application that allows users to book a table and gain access to a café at a specific time slot.
 Tech: MongoDB, Express, React, Node.js
 GitHub: https://github.com/AhmetEmreSengul/squirell
-Live Site: https://squirell.onrender.com
+Live Site: https://timeslot-dtqf.onrender.com
 Key Features:
 Table booking system based on available time
 -User-friendly reservation flow
