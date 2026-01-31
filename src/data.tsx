@@ -44,7 +44,7 @@ export const projectDetails: projectDetails[] = [
   {
     img: "../../coffee.png",
     title: "THE TIME SLOT CAFE",
-    desc: "A full-stack web app where users are able to book a table to be granted access to a coffee shop.",
+    desc: "A full-stack café ordering and table-booking platform with Stripe payments, and QR-based reservations with time-slot validation.",
     tech: ["Mongo", "Express", "React", "Node"],
     links: [
       "https://github.com/AhmetEmreSengul/coffee",

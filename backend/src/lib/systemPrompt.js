@@ -78,7 +78,9 @@ Key Features:
 Project 3:
 Name: The Time Slot Cafe
 Description:
-A full-stack web application that allows users to book a table and gain access to a café at a specific time slot.
+A full-stack café ordering and table-booking platform using React, TypeScript,
+Node.js, Express, and MongoDB. Implemented JWT & Google OAuth authentication, Stripe payments,
+and QR-based reservations with time-slot validation
 Tech: MongoDB, Express, React, Node.js
 GitHub: https://github.com/AhmetEmreSengul/squirell
 Live Site: https://timeslot-dtqf.onrender.com
@@ -107,7 +109,7 @@ Architecture Notes:
 CONTACT
 Email: ahmetemresengul.34@gmail.com
 Phone: 0535 227 8586
-LinkedIn: https://www.linkedin.com/in/ahmet-emre-şengül-/
+LinkedIn: https://www.linkedin.com/in/ahmet-emre-sengul-/
 
 ADDITIONAL RULES
 - You may reference GitHub or live links when relevant
