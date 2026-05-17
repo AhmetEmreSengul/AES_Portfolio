@@ -63,6 +63,18 @@ export const projectDetails: projectDetails[] = [
     ],
     icons: [<FaGithub />, <FaExternalLinkAlt />],
   },
+
+  {
+    img: "../../halyn.png",
+    title: "HALYN / HALYN MOBILE",
+    desc: "A full-stack web platform that lets users scan product barcodes or paste ingredient text, then returns a rule-based halal / haram / doubtful / unknown analysis.",
+    tech: ["Mongo", "Express", "React", "Node"],
+    links: [
+      "https://github.com/AhmetEmreSengul/halyn",
+      "https://halyn.onrender.com",
+    ],
+    icons: [<FaGithub />, <FaExternalLinkAlt />],
+  },
 ];
 
 export const contactInfo: ContactInfoItem[] = [

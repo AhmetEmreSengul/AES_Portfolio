@@ -106,6 +106,19 @@ Architecture Notes:
 - Component-based React structure
 - No backend, purely frontend UI
 
+Project 5:
+Name : Halyn / Halyn Mobile
+Description:
+A web / mobile app that helps users check if a product is haram or not.
+Tech: MongoDB, Express, React, Node.js
+GitHub: https://github.com/AhmetEmreSengul/halyn
+Github Mobile: https://github.com/AhmetEmreSengul/HalynMobile
+Live Site: https://halyn.onrender.com
+Key Features:
+- Real-time search barcode scanning with ingredient parsing
+- Real-time rule based halal classification
+
+
 CONTACT
 Email: ahmetemresengul.34@gmail.com
 Phone: 0535 227 8586
