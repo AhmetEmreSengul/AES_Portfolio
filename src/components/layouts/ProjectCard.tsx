@@ -42,10 +42,10 @@ const ProjectCard = ({ img, title, desc, tech, links, icons }: CardProps) => {
           </motion.div>
         </div>
       </div>
-      <div className="flex h-55 flex-col bg-[#01011db4] rounded-b-2xl  overflow-hidden">
-        <h1 className="font-bold mt-2 p-3 z-10 "> {title} </h1>
-        <p className="font-light mt-3 p-3 h-22 z-10 ">{desc}</p>
-        <div className="space-x-3 p-3 z-10 ">
+      <div className="flex h-55 flex-col bg-[#01011db4] rounded-b-2xl">
+        <h1 className="font-bold p-3 z-10 "> {title} </h1>
+        <p className="font-light px-3 h-25 z-10 ">{desc}</p>
+        <div className="space-x-3 px-3 py-5 z-10 ">
           {tech.map((item, i) => (
             <motion.span
               className="p-2 rounded-full bg-purple-600/15 backdrop-blur-md"
